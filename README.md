@@ -49,8 +49,10 @@ void deductProductFromInventory(int productId, int deliveryCenterId, int quantit
 * change user password and url for mysql 
 
 ```java
-mvn -f pom.xml clean install -DskipTests
-java -jar target/liciousInventory-1.0-SNAPSHOT.jar
+mvn clean install
+mvn exec:java -Dexec.mainClass="com.licious.InventoryManagementMain" -Dexec.cleanupDaemonThreads=false
+or
+java -cp target/liciousInventory-1.0-SNAPSHOT.jar com.licious.InventoryManagementMain
 ```
 
 ## References
